@@ -1,0 +1,174 @@
+---
+title: "Massgebende Schneehöhen"
+format: pdf
+lang: de
+documentclass: scrartcl
+toc: true
+toc-depth: 2
+fig-pos: 'H'
+---
+
+{{< pagebreak >}}
+
+# Allgemein {#sec-allgemein}
+
+Massgebend wird die Decke durch die Schneeeinwirkung belastet. Grundsätzlich lässt sich mit dem Einfluss der Schneelast, das Verhalten der Decke bei einem Lastwechsel ermitteln. Zu erwarten ist eine Steigerung der Deformation mit Erhöhung der Schneestärke. Als Annahme gilt, dass die Erhöhung der Schneestärke lediglich von der Tagessumme der Neuschneemenge abhängig ist. Die in der **Nutzungsvereinbarung geforderte Schneeräumung bei Schneefall** rechtfertigt diese Annahme.
+
+Basierend auf dieser Ausgangslage, werden folgend die täglichen Neuschneemengen ermittelt. Daraus werden massgebend Tage definiert und an diesen werden die gemessenen Deformationen analysiert und kommentiert.
+
+# Ermittlung der Neuschneemengen
+
+Das Bundesamt für Meteorologie und Klimatologie bietet Messwerte der Wetterstationen. Betrachtet wird hierbei die Wetterstation Pilatus.
+
+![Übersicht der Lage der Wetterstationen im Raum Luzern](bilder/stationen.png){#fig-stationen}
+
+Eine gemessene Neuschneehöhe liefert die Station **nicht**. Eine Abschätzung lässt sich mittels der Niederschlagsmenge tätigen. Dazu wird die @eq-schneehoehe verwendet. Eine Schneehöhe wird lediglich definiert, falls die Lufttemperatur im Tagesmittel unter null gesunken ist.
+
+$$
+\text{Neuschneehöhe} = \begin{cases}
+\text{Niederschlag}\cdot 10\text{ wenn } T\leq0  \text{°C}\\
+0\text{ wenn } T > 0\text{°C}
+\end{cases}
+$$ {#eq-schneehoehe}
+
+Folgende Messwerte werden verwendet zur Ermittlung der Neuschneehöhe:
+
+-   Lufttemperatur 2 m über Boden im Tagesmittel
+-   Niederschlag in der Tagessumme von 0 UTC bis 0 UTC
+
+## Referenzierung {#sec-referenz}
+
+Die Wetterstation in Luzern, ersichtlich in @fig-stationen, liefert Daten zu den Neuschneehöhen. Diese werden verwendet um die abgeschätzten Neuschneehöhen auf dem Pilatus abzugleichen. Dazu dienen die folgenden Messwerte aus der Messstation Luzern:
+
+-   Neuschneehöhe in der Tagessumme von 6 UTC bis 6 UTC am Folgetag
+
+## Darstellung der Resultate
+
+Auf [diesem Link](bilder/Schneehoehen_im_Raum_Luzern.html) ist eine interaktive Darstellung ersichtlich.
+
+Die @fig-2017_winter zeigt die mittels @eq-schneehoehe ermittelten Schneehöhen auf dem Pilatus, sowie die gemessenen Schneehöhen in Luzern für den Zeitausschnitt des Winters 2017 bis 2018. Die Messdaten reichen vom Jahr 1981 bis April 2023.
+
+![Schneehöhen für den Winter im Jahr 2017-2018](bilder/2017-09-01.svg){#fig-2017_winter}
+
+# Deformationen
+
+Die Messungen bzw. Aufnahmen der Deformationen der Decke reichen zurück bis ins Jahr 2015, welche in einem Zyklus von 15 Minuten erstellt worden sind. Dies resultiert zu einer Vielzahl von Aufnahmen. Um den Fokus auf aussagekräftige Messungen zu richten, werden anhand der ermittelten Neuschneehöhen massgebende Tage definiert, an denen die Neuschneehöhe in der Tagessumme 50 cm überschritten hat. Diese sind in der folgenden Tabelle dargestellt. Dazu werden lediglich Tage seit dem Jahr 2015 berücksichtigt.
+
+| Datum               | Neuschneehöhe Tagessumme \[cm\] |
+|:--------------------|--------------------------------:|
+| 2017-04-28 00:00:00 |                            66.3 |
+| 2017-12-14 00:00:00 |                            66.2 |
+| 2018-01-22 00:00:00 |                            56.5 |
+| 2018-12-09 00:00:00 |                            59.7 |
+| 2019-01-13 00:00:00 |                            54.7 |
+| 2019-01-14 00:00:00 |                              51 |
+| 2019-02-03 00:00:00 |                            96.3 |
+| 2021-12-04 00:00:00 |                            60.9 |
+
+: Kritische Tage mit Neuschneehöhen grösser als 50 cm
+
+In den nächsten Abschnitten werden die gemessenen Deformationen der massgebenden Tage dargestellt und kommentiert.
+
+{{< pagebreak >}}
+
+## Messung im April 2017
+
+Die Messung des 28. Aprils zeigt im Verlauf des Tages nicht erkennbare Deformationen. Die Änderung der Schneelast hat keinen signifikanten Einfluss auf die Deformation.
+
+![Neuschneehöhen im April 2017](bilder/2017-03-01.svg){#fig-april2017}
+
+::: {#fig-april28 layout="[20,-20,20]"}
+![28. April 00:00:00](bilder/cam3_17-04-28_00-00-00-03.jpg){#fig-28042017_00}
+
+![28. April 23:59:59](bilder/cam3_17-04-29_00-00-00-02.jpg){#fig-28042017_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+{{< pagebreak >}}
+
+## Messung im Dezember 2017
+
+Die Messung des 14. Dezembers zeigt eine Deformation im Bereich von weniger als einem halben Millimeter durch die Änderung der Schneelast. Diese wird als nicht signifikant bewertet.
+
+![Neuschneehöhen im Dezember 2017](bilder/2017-11-01.svg){#fig-dezember2017}
+
+::: {#fig-dezember14 layout="[20,-20,20]"}
+![14. Dezember 00:00:00](bilder/cam3_17-12-14_00-00-00-06.jpg){#fig-14122017_00}
+
+![14. Dezember 23:59:59](bilder/cam3_17-12-14_23-59-59-99.jpg){#fig-14122017_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+{{< pagebreak >}}
+
+## Messung im Januar 2018
+
+In @fig-januar2018 ist zu erkennen, dass sich seit dem 15. Januar täglich Neuschnee angehäuft hat. Ein Vergleich vom 15. Januar mit dem 22. Januar resultiert zu keiner signifikanten Deformation.
+
+![Neuschneehöhen im Januar 2018](bilder/2018-01-01.svg){#fig-januar2018}
+
+::: {#fig-januar15 layout="[20,-1, 20, -1, 20]"}
+![15. Januar 00:00:00](bilder/cam3_18-01-15_00-00-00-03.jpg){#fig-15012018_00}
+
+![22. Januar 00:00:00](bilder/cam3_18-01-22_00-00-00-01.jpg){#fig-22012018_00}
+
+![22. Januar 23:59:59](bilder/cam3_18-01-23_00-00-00-00.jpg){#fig-22012018_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+{{< pagebreak >}}
+
+### Messung im Dezember 2018
+
+Die Messung des 09. Dezembers zeigt keine signifikante Deformation durch die Änderung der Schneelast.
+
+![Neuschneehöhen im Dezember 2018](bilder/2018-11-01.svg){#fig-dezember2018}
+
+::: {#fig-dezember9 layout="[20,-20, 20]"}
+![9. Dezember 00:00:00](bilder/cam3_18-12-09_00-00-00-00.jpg){#fig-09122018_00}
+
+![9. Dezember 23:59:59](bilder/cam3_18-12-09_23-59-59-99.jpg){#fig-09122018_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+{{< pagebreak >}}
+
+## Messung im Januar 2019
+
+Die Messung des 13. Januars zeigt keine signifikante Deformation durch die Änderung der Schneelast.
+
+![Neuschneehöhen im Januar 2019](bilder/2019-01-01.svg){#fig-januar2019}
+
+::: {#fig-januar13 layout="[20,-1, 20, -1, 20]"}
+![13. Januar 00:00:00](bilder/cam3_19-01-13_00-00-00-02.jpg){#fig-13012019_00}
+
+![13. Januar 23:59:59](bilder/cam3_19-01-14_00-00-00-02.jpg){#fig-13012019_23}
+
+![14. Januar 23:59:59](bilder/cam3_19-01-15_00-00-00-01.jpg){#fig-14012019_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+{{< pagebreak >}}
+
+## Messung im Februar
+
+Die Messung des 03. Februars zeigt keine signifikante Deformation durch die Änderung der Schneelast.
+
+![Neuschneehöhen im Februar 2019](bilder/2019-01-01.svg){#fig-februar2019}
+
+::: {#fig-februar3 layout="[20,-20, 20]"}
+![03. Februar 00:00:00](bilder/cam3_19-02-03_00-00-00-06.jpg){#fig-03022019_00}
+
+![03. Februar 23:59:59](bilder/cam3_19-02-04_00-00-00-02.jpg){#fig-03022019_23}
+
+Aufgenommen durch Kamera 3
+:::
+
+# Schlussfolgerung
+
+Es lässt sich festhalten, dass die Änderung der Schneelast keinen signifikanten Einfluss auf die Deformation hat.
